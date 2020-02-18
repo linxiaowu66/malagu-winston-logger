@@ -1,1 +1,1 @@
-# Malagu - React extension
+# Malagu - Winston Logger
