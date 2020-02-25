@@ -3,5 +3,5 @@ malagu:
     winstonConfig:
       level: 'info'
     dailyRotateConfig:
-      frequency: '1d',
+      frequency: '1d'
       filename: 'malagu-%DATE%.log'
