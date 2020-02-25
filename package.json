@@ -5,7 +5,10 @@
   "main": "lib/common/index.js",
   "typings": "lib/common/index.d.ts",
   "dependencies": {
-    "@malagu/core": "^0.0.10"
+    "@malagu/core": "0.1.0-next.5c1dc956",
+    "@malagu/web": "0.1.0-next.5c1dc956",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.4.2"
   },
   "publishConfig": {
     "access": "public"
@@ -29,12 +32,17 @@
   ],
   "scripts": {
     "prepare": "yarn run clean && yarn run build",
-    "clean": "malaguext clean",
-    "build": "malaguext build",
-    "watch": "malaguext watch",
-    "test": "malaguext test",
-    "docs": "malaguext docs"
+    "clean": "rimraf lib",
+    "build": "tsc ",
+    "watch": "tsc -w"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-no-null": "^1.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.2"
   }
 }
