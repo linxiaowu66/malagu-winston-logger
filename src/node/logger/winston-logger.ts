@@ -9,8 +9,6 @@ export class WinstonLogger implements Logger {
 
   protected logger: winstonLogger;
 
-  protected prefix = '';
-
   constructor (
     @Value(LOGGER_CONFIG)
     protected readonly config: any
@@ -47,30 +45,30 @@ export class WinstonLogger implements Logger {
       const traceId = Context.getTraceId();
       const path = Context.getRequest().path;
       const method = Context.getRequest().method;
-      this.prefix = `${traceId} ${method.toLocaleUpperCase()} ${path} on ${hostname} in pid[${pid}]`;
+      return  `${traceId} ${method.toLocaleUpperCase()} ${path} on ${hostname} in pid[${pid}]`;
       return;
     }
 
-    this.prefix = `${hostname} in pid[${pid}]`;
+    return `${hostname} in pid[${pid}]`;
   }
 
-  error(message: string) {
-    this.logger.error(`${this.prefix} ${message}`);
+  error(message: string, prefix = this.messagePrefix()) {
+    this.logger.error(`${prefix} ${message}`);
   }
 
-  warn(message: string) {
-    this.logger.warn(`${this.prefix} ${message}`);
+  warn(message: string, prefix = this.messagePrefix()) {
+    this.logger.warn(`${prefix} ${message}`);
   }
 
-  info(message: string) {
-    this.logger.info(`${this.prefix} ${message}`);
+  info(message: string, prefix = this.messagePrefix()) {
+    this.logger.info(`${prefix} ${message}`);
   }
 
-  debug(message: string) {
-    this.logger.debug(`${this.prefix} ${message}`);
+  debug(message: string, prefix = this.messagePrefix()) {
+    this.logger.debug(`${prefix} ${message}`);
   }
 
-  verbose(message: string) {
-    this.logger.verbose(`${this.prefix} ${message}`);
+  verbose(message: string, prefix = this.messagePrefix()) {
+    this.logger.verbose(`${prefix} ${message}`);
   }
 }
