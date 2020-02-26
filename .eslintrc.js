@@ -148,4 +148,9 @@ module.exports = {
           "error"
       ],
   },
+  "settings": {
+    "import/core-modules": [
+      "winston-transport"
+    ]
+  }
 };
