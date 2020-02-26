@@ -45,7 +45,7 @@ export class WinstonLogger implements Logger {
       const traceId = Context.getTraceId();
       const path = Context.getRequest().path;
       const method = Context.getRequest().method;
-      return  `${traceId} ${method.toLocaleUpperCase()} ${path} on ${hostname} in pid[${pid}]`;
+      return  `${traceId ? `${traceId}` : ' '}${method.toLocaleUpperCase()} ${path} on ${hostname} in pid[${pid}]`;
       return;
     }
 

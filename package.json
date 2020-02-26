@@ -1,6 +1,6 @@
 {
   "name": "malagu-winston",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "lib/node/index.js",
   "typings": "lib/node/index.d.ts",
