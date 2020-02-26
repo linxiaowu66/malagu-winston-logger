@@ -1,6 +1,6 @@
 import { Logger, Component, Value, LOGGER_CONFIG } from '@malagu/core';
 import { Context } from '@malagu/web/lib/node';
-import { createLogger, Logger as winstonLogger } from 'winston';
+import { createLogger, Logger as winstonLogger, transports } from 'winston';
 import * as Transport from 'winston-transport';
 import * as os from 'os';
 
@@ -16,22 +16,23 @@ export class WinstonLogger implements Logger {
     const { winstonConfig } = this.config;
     this.logger = createLogger({
       ...winstonConfig,
+      transports: [new transports.Console()]
     });
   }
 
-  public addTransports(transports: Transport[] | Transport) {
-    if (Array.isArray(transports)) {
-      transports.map(transport => this.logger.add(transport));
+  public addTransports(transport: Transport[] | Transport) {
+    if (Array.isArray(transport)) {
+      transport.map(item => this.logger.add(item));
       return;
     }
-    this.logger.add(transports);
+    this.logger.add(transport);
   }
-  public removeTransports(transports: Transport[] | Transport) {
-    if (Array.isArray(transports)) {
-      transports.map(transport => this.logger.remove(transport));
+  public removeTransports(transport: Transport[] | Transport) {
+    if (Array.isArray(transport)) {
+      transport.map(item => this.logger.remove(item));
       return;
     }
-    this.logger.remove(transports);
+    this.logger.remove(transport);
   }
 
   public getLogger() {
