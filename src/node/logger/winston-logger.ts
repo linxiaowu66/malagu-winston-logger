@@ -46,11 +46,11 @@ export class WinstonLogger implements Logger {
       const traceId = Context.getTraceId();
       const path = Context.getRequest().path;
       const method = Context.getRequest().method;
-      return  `${traceId ? `${traceId}` : ' '}${method.toLocaleUpperCase()} ${path} on ${hostname} in pid[${pid}]`;
+      return  `${method.toLocaleUpperCase()} ${path} ( ${pid} on ${hostname})${traceId ? ` with ${traceId}` : ''}`;
       return;
     }
 
-    return `${hostname} in pid[${pid}]`;
+    return `(${pid} on ${hostname})`;
   }
 
   error(message: string, prefix = this.messagePrefix()) {
