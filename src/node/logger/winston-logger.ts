@@ -1,8 +1,9 @@
-import { Logger, Component, Value, LOGGER_CONFIG } from '@malagu/core';
+import { Logger, Component, Value, LOGGER_CONFIG, Autowired, Optional } from '@malagu/core';
 import { Context } from '@malagu/web/lib/node';
 import { createLogger, Logger as winstonLogger, transports } from 'winston';
 import * as Transport from 'winston-transport';
 import * as os from 'os';
+import { WinstonConfig } from './winston-logger-protocol';
 
 @Component({ id: Logger, rebind: true })
 export class WinstonLogger implements Logger {
@@ -11,11 +12,15 @@ export class WinstonLogger implements Logger {
 
   constructor (
     @Value(LOGGER_CONFIG)
-    protected readonly config: any
+    protected readonly config: any,
+    @Autowired(WinstonConfig)
+    @Optional()
+    protected readonly winstonConfig1: WinstonConfig
   ) {
     const { winstonConfig } = this.config;
     this.logger = createLogger({
       ...winstonConfig,
+      ...winstonConfig1,
       transports: [new transports.Console()]
     });
   }
