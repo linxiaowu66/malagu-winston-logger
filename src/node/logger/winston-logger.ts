@@ -19,9 +19,9 @@ export class WinstonLogger implements Logger {
   ) {
     const { winstonConfig } = this.config;
     this.logger = createLogger({
+      transports: [new transports.Console()],
       ...winstonConfig,
       ...winstonConfig1,
-      transports: [new transports.Console()]
     });
   }
 

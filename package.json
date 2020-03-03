@@ -1,12 +1,12 @@
 {
   "name": "malagu-winston",
-  "version": "0.0.10",
+  "version": "0.0.13",
   "description": "",
   "main": "lib/node/index.js",
   "typings": "lib/node/index.d.ts",
   "dependencies": {
-    "@malagu/core": "0.1.0-next.5c1dc956",
-    "@malagu/web": "0.1.0-next.5c1dc956",
+    "@malagu/core": "0.1.0-next.7e42b4b8",
+    "@malagu/web": "0.1.0-next.7e42b4b8",
     "winston": "^3.2.1"
   },
   "publishConfig": {
