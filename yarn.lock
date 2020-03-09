@@ -18,10 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@malagu/core@0.1.0-next.5c1dc956":
-  version "0.1.0-next.5c1dc956"
-  resolved "https://registry.yarnpkg.com/@malagu/core/-/core-0.1.0-next.5c1dc956.tgz#3847e45fea70330a31002d2e193d0ab4f70b3b86"
-  integrity sha512-8N4y8oBQ/z5TX7jZUrSb0mApJv4S+i9vi3BWJFBMWSnZminUindA2DDxXgWbKfVzEw0f708jByq6ZdH1oegysA==
+"@malagu/core@0.1.0-next.64fc048d":
+  version "0.1.0-next.64fc048d"
+  resolved "https://registry.yarnpkg.com/@malagu/core/-/core-0.1.0-next.64fc048d.tgz#737c33acac4cc88593fb9d0031d3eaeb51e3c8d5"
+  integrity sha512-dLcCU7bAC7x9CKz2CsZkh+IxUcUQUMwhiBh9F9U9F442PzISW58rDgg8tIu2+DD5R6WgEl8M/KIvdhqdhX0YJQ==
   dependencies:
     "@types/express" "^4.16.1"
     "@types/lodash.debounce" "4.0.3"
@@ -41,12 +41,12 @@
     url-join "^4.0.1"
     vscode-ws-jsonrpc "^0.1.1"
 
-"@malagu/web@0.1.0-next.5c1dc956":
-  version "0.1.0-next.5c1dc956"
-  resolved "https://registry.yarnpkg.com/@malagu/web/-/web-0.1.0-next.5c1dc956.tgz#d4cfa91d1bce760705f41a2fce56c256e86075d5"
-  integrity sha512-InReE11xeFAPsDwvy8IMi50WSXHBZM0zZrcGNQrCPxGOehQiV7Z+Y0Cl+BTJrVBqdVlXVRbbfwWAWGpbF6pyVg==
+"@malagu/web@0.1.0-next.64fc048d":
+  version "0.1.0-next.64fc048d"
+  resolved "https://registry.yarnpkg.com/@malagu/web/-/web-0.1.0-next.64fc048d.tgz#c34d6887dfa3f152265a2af59ba3882a16690d04"
+  integrity sha512-4h2wXyO/h3SoYF/PBGMp6yCOIJ+CdrERM7uNSOywNQd5/PQMyHQVBvfprYNyZL/WD5TQbETLS/5j5nM2Ln6/vg==
   dependencies:
-    "@malagu/core" "0.1.0-next.5c1dc956"
+    "@malagu/core" "0.1.0-next.64fc048d"
     "@types/express" "^4.16.1"
     cookies "^0.7.3"
     cors "^2.8.5"
