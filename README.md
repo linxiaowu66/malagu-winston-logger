@@ -106,3 +106,5 @@ export class Test {
   }
 }
 ```
+
+更多使用示例可以参考豆米博客源码：[传送门](https://github.com/linxiaowu66/doumi-blog)
