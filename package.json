@@ -1,6 +1,6 @@
 {
   "name": "malagu-winston",
-  "version": "0.0.17",
+  "version": "2.22.11",
   "description": "",
   "main": "lib/node/index.js",
   "typings": "lib/node/index.d.ts",
@@ -8,8 +8,8 @@
     "winston": "^3.2.1"
   },
   "peerDependencies": {
-    "@malagu/core": "<=1.0.0",
-    "@malagu/web": "<=1.0.0"
+    "@malagu/core": ">=2.0.0",
+    "@malagu/web": ">=2.0.0"
   },
   "publishConfig": {
     "access": "public"
